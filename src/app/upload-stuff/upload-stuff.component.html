@@ -1,0 +1,89 @@
+<div class="center" style=" padding-top : 200px ">
+    <h1>Upload Item</h1>
+  </div>
+  <div class="center">
+  <select style=" width: 350px " class="form-select" id="sel1" name="sellist1" [(ngModel)]="this.group">
+    <option>หมวดหมู่สินค้า</option>
+    <option>กระดาษถ่ายเอกสาร</option>
+    <option>กระดาษการ์ดสี_A4</option>
+    <option>กระดาษโฟโต้_กระดาษใบประกาศ</option>
+    <option>ฟิมล์เคลือบบัตร_กระดาษโน๊ต_กระดาษโน๊ตกาว(โพสอิท)</option>
+    <option>กระดาษรายงาน_กระดาษวาดภาพ_100ปอนด์_A4/A3</option>
+    <option>กระดาษสติ๊กเกอร์_แผ่นใสรองปก_กระดาษคำตอบ</option>
+    <option>กระดาษต่อเนื่อง</option>
+    <option>กระดาษแฟกซ์_กระดาคาร์บอนก๊อบปี้</option>
+    <option>กระดาษสี_โปสเตอร์</option>
+    <option>กาว_ปืนกาว</option>
+    <option>เทปกาว_เทปใส_กระดาษกาวย่น</option>
+    <option>สันรูด_สันห่วง_เทปสันปก</option>
+    <option>กรรไกร_มีดคัตเตอร์_ใบมีด_แท่นตัดสก๊อตเทป</option>
+    <option>แฟ้ม_ไส้แฟ้ม_ลิ้นแฟ้ม</option>
+    <option>สมุด_บิล</option>
+    <option>ดินสอ_เครื่องเหลาดินสอ_กล่องดินสอ_ไส้ดินสอ_ดินน้ำมัน</option>
+    <option>ปากกา_ไส้ปากกา_ชอล์ก</option>
+    <option>ยางลบ_น้ำยาลบคำผิด_ลิควิดเปเปอร์_แปรงลบกระดาน</option>
+    <option>ไม้บรรทัด_ชุดเลขาคณิต_กระดานไวท์บอร์ด</option>
+    <option>สี_พู่กัน_จานสี</option>
+    <option>ที่เจาะกระดาษ_คลิปหนีบ_ลวดเสียบ_คลิปบอร์ด</option>
+    <option>แม็กเย็บกระดาษ_ไส้แม็กเย็บกระดาษ</option>
+    <option>ตลับชาด_หมึกเติมตลับชาด_ตรายาง_ที่แขวนตรายาง</option>
+    <option>เครื่องคิดเลข_แม่เหล็ก_ที่คั้นหนังสือ</option>
+    <option>ดอกไม้_เชือก_ลิบบิ้น_ห่วงทอง_กิ๊บ_เข็มกลัด</option>
+    <option>ซองเอกสาร_แก้วกระดาษ_กรวย</option>
+    <option>อุปกรณ์คอมพิวเตอร์</option>
+    <option>ปริ้นเตอร์_หมึกปริ้นเตอร์_แทงค์_ดั้ม</option>
+    <option>ปลั๊กไฟ</option>
+    <option>สายสัญญาณ_หลอดไฟ</option>
+    <option>กล่องใส่เอกสาร_ตะกร้าใส่เอกสาร_ลิ้นชักใส่เอกสาร</option>
+    <option>ไม้ถู_ไม้ขนไก่_ไม้กวาด</option>
+    <option>ถังขยะ_ถังน้ำ_ตระกร้าต่างๆ</option>
+    <option>ถุงร้อน_ถุงขยะ_ด้าย_เข็ม</option>
+    <option>น้ำยาล้างห้องน้ำ_ถูพื้น_เช็ดกระจก_ซัลไลน์</option>
+    <option>แป้ง_สบู่_หลอดดูด_กระจก</option>
+    <option>แปรงฟัน_ยาสีฟัน_แก้วน้ำพลาสติก_ผ้าเช็ดหน้า</option>
+    <option>น้ำยาสปาคลีน</option>
+    <option>กีฬา_ของเล่น</option>
+    <option>สายสัญญาณ_สายแลน_พัดลม</option>
+    <option>กุญแจ</option>
+    <option>กรอบรูป</option>
+    <option>ธง</option>
+    <option>ป้าย_พลาสติก</option>
+    <option>ถ่าน_แบตเตอรลี่_ไฟฉาย</option>
+    <option>กระติกน้ำร้อน_นาฬิกา_เครื่องเล่นDVD_เสียม_จอบ_บัว_กล่องรับสัญญาณ</option>
+    <option>ฟิวเจอร์บอร์ด_โฟม</option>
+    <option>กระดานไวท์บอร์ด_กระดานชานอ้อย</option>
+    <option>เคเบิ้ล_ไทน์</option>
+    <option>โทรศัพท์สำนักงาน</option>
+    <option>ยาสามัญ</option>
+    <option>Double_A</option>
+  </select>
+  </div>
+  <br>
+  <div class="center">
+    <form #UploadItemForm="ngForm" (ngSubmit)="writeUserData(UploadItemForm.value)">
+      <input style=" width: 350px " type="text" ngModel id="ID_Item" name="ID_Item" placeholder="ID สินค้า" />
+      <br>
+      <br>
+      <input style=" width: 350px " type="text" ngModel id="Name_Item" name="Name_Item" placeholder="ชื่อสินค้า" />
+      <br>
+      <br>
+      <input style=" width: 350px " type="text" ngModel id="Detail_Item" name="Detail_Item" placeholder="รายละเอียดสินค้า" />
+      <br>
+      <br>
+      <input style=" width: 350px " type="text" ngModel id="Cost_Item" name="Cost_Item" placeholder="ราคาสินค้า" />
+      <br>
+      <br>
+      <input style=" width: 350px " type="text" ngModel id="Quantity_Item" name="Quantity_Item" placeholder="จำนวนสินค้า" />
+      <br>
+      <br>
+      <input style=" width: 350px " type="text" ngModel id="Unit_Item" name="Unit_Item" placeholder="หน่วยสินค้า" />
+      <br>
+      <br>
+      <input style=" width: 350px " type="text" ngModel id="Img_Item" name="Img_Item" placeholder="ID รูปภาพสินค้า" />
+      <br>
+      <br>
+      <div class="center">
+        <input type="submit" id="saveData" name="signup_submit" value="save" />
+      </div>
+    </form>
+  </div>

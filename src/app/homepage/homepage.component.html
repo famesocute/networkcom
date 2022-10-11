@@ -1,0 +1,389 @@
+
+<div class="center" style="padding-top: 100px;">
+    <ngb-carousel>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="../../assets/picture shopping/adv3.png" alt="Random first slide" width="900" height="301">
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img src="../../assets/picture shopping/adv2.png" alt="Random first slide" width="900" height="301">
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+  <br>
+  
+  <div *ngIf="this.loading; else elseBlock">
+    <div class="center" style="padding-top: 20px;">
+      <div class="spinner-grow text-primary" role="status">
+        <span class="sr-only"></span>
+        <p>Loading...</p>
+      </div>
+    </div>
+  </div>
+  <ng-template #elseBlock>
+    <!-- ..................................................................... -->
+    <div class="card1">
+        <div class="card-body">
+          <h5 class="card-title" style="padding-top: 20px; padding-left : 20px; "><b>กระดาษถ่ายเอกสาร</b></h5>
+          <br>
+      <div class=" container ">
+        <div *ngFor="let item of this.stuff2 let i = index">
+          <div *ngIf="item.Group_Item == 'กระดาษถ่ายเอกสาร'">
+            <div class="card" style="width:1000px; height: 170px;">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-xl-3">
+                    <img src="../../assets/picture shopping/{{item.Img_Item}}" alt="Card image"
+                      style="width:150px; height: 150px;">
+                  </div>
+                  <div class="col-xl-6">
+                    <p class="card-title">{{item.Name_Item}}</p>
+                    <p class="card-text">{{item.Detail_Item}}</p>
+                  </div>
+                  <div class="col-xl-3">
+                    <p class="card-text"><b>ราคา</b> : {{item.Cost_Item}} บาท</p>
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <br>
+      <div class="center" style="padding-bottom: 20px;">
+        <div class="example-button-row">
+          <button mat-raised-button style="background-color: blue;font-size: 15px; color: #FFF;" (click)="detailpage('กระดาษถ่ายเอกสาร')" >ดูสินค้าเพิ่มเติมในหมวดนี้</button>
+        </div>
+      </div>
+        </div>
+      </div>
+  <br>
+  
+    <!-- ..................................................................... -->
+    <div class="card1">
+        <div class="card-body">
+          <h5 class="card-title" style="padding-top: 20px; padding-left : 20px; "><b>กระดาษการ์ดสี_A4</b></h5>
+          <br>
+      <div class=" container ">
+        <div *ngFor="let item of this.stuff2 let i = index">
+          <div *ngIf="item.Group_Item == 'กระดาษการ์ดสี_A4'">
+            <div class="card" style="width:1000px; height: 170px;">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-xl-3">
+                    <img src="../../assets/picture shopping/{{item.Img_Item}}" alt="Card image"
+                      style="width:150px; height: 150px;">
+                  </div>
+                  <div class="col-xl-6">
+                    <p class="card-title">{{item.Name_Item}}</p>
+                    <p class="card-text">{{item.Detail_Item}}</p>
+                  </div>
+                  <div class="col-xl-3">
+                    <p class="card-text"><b>ราคา</b> : {{item.Cost_Item}} บาท</p>
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <br>
+      <div class="center" style="padding-bottom: 20px;">
+        <div class="example-button-row">
+          <button mat-raised-button style="background-color: blue;font-size: 15px; color: #FFF;" (click)="detailpage('กระดาษการ์ดสี_A4')" >ดูสินค้าเพิ่มเติมในหมวดนี้</button>
+        </div>
+      </div>
+        </div>
+      </div>
+  <br>
+  
+    <!-- ..................................................................... -->
+    <div class="card1">
+        <div class="card-body">
+          <h5 class="card-title" style="padding-top: 20px; padding-left : 20px; "><b>กระดาษโฟโต้_กระดาษใบประกาศ</b></h5>
+          <br>
+      <div class=" container ">
+        <div *ngFor="let item of this.stuff2 let i = index">
+          <div *ngIf="item.Group_Item == 'กระดาษโฟโต้_กระดาษใบประกาศ'">
+            <div class="card" style="width:1000px; height: 170px;">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-xl-3">
+                    <img src="../../assets/picture shopping/{{item.Img_Item}}" alt="Card image"
+                      style="width:150px; height: 150px;">
+                  </div>
+                  <div class="col-xl-6">
+                    <p class="card-title">{{item.Name_Item}}</p>
+                    <p class="card-text">{{item.Detail_Item}}</p>
+                  </div>
+                  <div class="col-xl-3">
+                    <p class="card-text"><b>ราคา</b> : {{item.Cost_Item}} บาท</p>
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <br>
+      <div class="center" style="padding-bottom: 20px;">
+        <div class="example-button-row">
+          <button mat-raised-button style="background-color: blue;font-size: 15px; color: #FFF;" (click)="detailpage('กระดาษโฟโต้_กระดาษใบประกาศ')" >ดูสินค้าเพิ่มเติมในหมวดนี้</button>
+        </div>
+      </div>
+        </div>
+      </div>
+  <br>
+  
+    <!-- ..................................................................... -->
+    <div class="card1">
+        <div class="card-body">
+          <h5 class="card-title" style="padding-top: 20px; padding-left : 20px; "><b>ฟิมล์เคลือบบัตร_กระดาษโน๊ต_กระดาษโน๊ตกาว</b></h5>
+          <br>
+      <div class=" container ">
+        <div *ngFor="let item of this.stuff2 let i = index">
+          <div *ngIf="item.Group_Item == 'ฟิมล์เคลือบบัตร_กระดาษโน๊ต_กระดาษโน๊ตกาว'">
+            <div class="card" style="width:1000px; height: 170px;">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-xl-3">
+                    <img src="../../assets/picture shopping/{{item.Img_Item}}" alt="Card image"
+                      style="width:150px; height: 150px;">
+                  </div>
+                  <div class="col-xl-6">
+                    <p class="card-title">{{item.Name_Item}}</p>
+                    <p class="card-text">{{item.Detail_Item}}</p>
+                  </div>
+                  <div class="col-xl-3">
+                    <p class="card-text"><b>ราคา</b> : {{item.Cost_Item}} บาท</p>
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <br>
+      <div class="center" style="padding-bottom: 20px;">
+        <div class="example-button-row">
+          <button mat-raised-button style="background-color: blue;font-size: 15px; color: #FFF;" (click)="detailpage('ฟิมล์เคลือบบัตร_กระดาษโน๊ต_กระดาษโน๊ตกาว')" >ดูสินค้าเพิ่มเติมในหมวดนี้</button>
+        </div>
+      </div>
+        </div>
+      </div>
+  <br>
+  
+    <!-- ..................................................................... -->
+    <div class="card1">
+        <div class="card-body">
+          <h5 class="card-title" style="padding-top: 20px; padding-left : 20px; "><b>กระดาษรายงาน_กระดาษวาดภาพ_100ปอนด์_A4</b></h5>
+          <br>
+      <div class=" container ">
+        <div *ngFor="let item of this.stuff2 let i = index">
+          <div *ngIf="item.Group_Item == 'กระดาษรายงาน_กระดาษวาดภาพ_100ปอนด์_A4'">
+            <div class="card" style="width:1000px; height: 170px;">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-xl-3">
+                    <img src="../../assets/picture shopping/{{item.Img_Item}}" alt="Card image"
+                      style="width:150px; height: 150px;">
+                  </div>
+                  <div class="col-xl-6">
+                    <p class="card-title">{{item.Name_Item}}</p>
+                    <p class="card-text">{{item.Detail_Item}}</p>
+                  </div>
+                  <div class="col-xl-3">
+                    <p class="card-text"><b>ราคา</b> : {{item.Cost_Item}} บาท</p>
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <br>
+      <div class="center" style="padding-bottom: 20px;">
+        <div class="example-button-row">
+          <button mat-raised-button style="background-color: blue;font-size: 15px; color: #FFF;" (click)="detailpage('กระดาษรายงาน_กระดาษวาดภาพ_100ปอนด์_A4')" >ดูสินค้าเพิ่มเติมในหมวดนี้</button>
+        </div>
+      </div>
+        </div>
+      </div>
+  <br>
+  
+    <!-- ..................................................................... -->
+    <div class="card1">
+        <div class="card-body">
+          <h5 class="card-title" style="padding-top: 20px; padding-left : 20px; "><b>กระดาษสติ๊กเกอร์_แผ่นใสรองปก_กระดาษคำตอบ</b></h5>
+          <br>
+      <div class=" container ">
+        <div *ngFor="let item of this.stuff2 let i = index">
+          <div *ngIf="item.Group_Item == 'กระดาษสติ๊กเกอร์_แผ่นใสรองปก_กระดาษคำตอบ'">
+            <div class="card" style="width:1000px; height: 170px;">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-xl-3">
+                    <img src="../../assets/picture shopping/{{item.Img_Item}}" alt="Card image"
+                      style="width:150px; height: 150px;">
+                  </div>
+                  <div class="col-xl-6">
+                    <p class="card-title">{{item.Name_Item}}</p>
+                    <p class="card-text">{{item.Detail_Item}}</p>
+                  </div>
+                  <div class="col-xl-3">
+                    <p class="card-text"><b>ราคา</b> : {{item.Cost_Item}} บาท</p>
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <br>
+      <div class="center" style="padding-bottom: 20px;">
+        <div class="example-button-row">
+          <button mat-raised-button style="background-color: blue;font-size: 15px; color: #FFF;" (click)="detailpage('กระดาษสติ๊กเกอร์_แผ่นใสรองปก_กระดาษคำตอบ')" >ดูสินค้าเพิ่มเติมในหมวดนี้</button>
+        </div>
+      </div>
+        </div>
+      </div>
+  <br>
+  
+    <!-- ..................................................................... -->
+    <div class="card1">
+        <div class="card-body">
+          <h5 class="card-title" style="padding-top: 20px; padding-left : 20px; "><b>กระดาษต่อเนื่อง</b></h5>
+          <br>
+      <div class=" container ">
+        <div *ngFor="let item of this.stuff2 let i = index">
+          <div *ngIf="item.Group_Item == 'กระดาษต่อเนื่อง'">
+            <div class="card" style="width:1000px; height: 170px;">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-xl-3">
+                    <img src="../../assets/picture shopping/{{item.Img_Item}}" alt="Card image"
+                      style="width:150px; height: 150px;">
+                  </div>
+                  <div class="col-xl-6">
+                    <p class="card-title">{{item.Name_Item}}</p>
+                    <p class="card-text">{{item.Detail_Item}}</p>
+                  </div>
+                  <div class="col-xl-3">
+                    <p class="card-text"><b>ราคา</b> : {{item.Cost_Item}} บาท</p>
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <br>
+      <div class="center" style="padding-bottom: 20px;">
+        <div class="example-button-row">
+          <button mat-raised-button style="background-color: blue;font-size: 15px; color: #FFF;" (click)="detailpage('กระดาษต่อเนื่อง')" >ดูสินค้าเพิ่มเติมในหมวดนี้</button>
+        </div>
+      </div>
+        </div>
+      </div>
+  <br>
+  
+    <!-- ..................................................................... -->
+    <div class="card1">
+        <div class="card-body">
+          <h5 class="card-title" style="padding-top: 20px; padding-left : 20px; "><b>กระดาษแฟกซ์_กระดาคาร์บอนก๊อบปี้</b></h5>
+          <br>
+      <div class=" container ">
+        <div *ngFor="let item of this.stuff2 let i = index">
+          <div *ngIf="item.Group_Item == 'กระดาษแฟกซ์_กระดาคาร์บอนก๊อบปี้'">
+            <div class="card" style="width:1000px; height: 170px;">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-xl-3">
+                    <img src="../../assets/picture shopping/{{item.Img_Item}}" alt="Card image"
+                      style="width:150px; height: 150px;">
+                  </div>
+                  <div class="col-xl-6">
+                    <p class="card-title">{{item.Name_Item}}</p>
+                    <p class="card-text">{{item.Detail_Item}}</p>
+                  </div>
+                  <div class="col-xl-3">
+                    <p class="card-text"><b>ราคา</b> : {{item.Cost_Item}} บาท</p>
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <br>
+      <div class="center" style="padding-bottom: 20px;">
+        <div class="example-button-row">
+          <button mat-raised-button style="background-color: blue;font-size: 15px; color: #FFF;" (click)="detailpage('กระดาษแฟกซ์_กระดาคาร์บอนก๊อบปี้')" >ดูสินค้าเพิ่มเติมในหมวดนี้</button>
+        </div>
+      </div>
+        </div>
+      </div>
+  <br>
+  
+    <!-- ..................................................................... -->
+    <div class="card1">
+        <div class="card-body">
+          <h5 class="card-title" style="padding-top: 20px; padding-left : 20px; "><b>กระดาษสี_โปสเตอร์</b></h5>
+          <br>
+      <div class=" container ">
+        <div *ngFor="let item of this.stuff2 let i = index">
+          <div *ngIf="item.Group_Item == 'กระดาษสี_โปสเตอร์'">
+            <div class="card" style="width:1000px; height: 170px;">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-xl-3">
+                    <img src="../../assets/picture shopping/{{item.Img_Item}}" alt="Card image"
+                      style="width:150px; height: 150px;">
+                  </div>
+                  <div class="col-xl-6">
+                    <p class="card-title">{{item.Name_Item}}</p>
+                    <p class="card-text">{{item.Detail_Item}}</p>
+                  </div>
+                  <div class="col-xl-3">
+                    <p class="card-text"><b>ราคา</b> : {{item.Cost_Item}} บาท</p>
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <br>
+      <div class="center" style="padding-bottom: 20px;">
+        <div class="example-button-row">
+          <button mat-raised-button style="background-color: blue;font-size: 15px; color: #FFF;" (click)="detailpage('กระดาษสี_โปสเตอร์')" >ดูสินค้าเพิ่มเติมในหมวดนี้</button>
+        </div>
+      </div>
+        </div>
+      </div>
+  <br>
+  
+  <br>
+  </ng-template>
+  
